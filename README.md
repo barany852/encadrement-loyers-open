@@ -26,7 +26,8 @@ publient ces données en open data.
 | **Paris** | 2025 | 80 | 2 560 | [opendata.paris.fr](https://opendata.paris.fr/explore/dataset/logement-encadrement-des-loyers/) |
 | **Métropole de Lyon** (Lyon + Villeurbanne) | 2025-2026 | 233 | 9 320 | [data.grandlyon.com](https://data.grandlyon.com/portail/fr/jeux-de-donnees/encadrement-des-loyers-de-la-metropole-de-lyon-2025-2026/info) |
 | **Montpellier** | 2026 | 93 | 3 720 | Arrêté préfectoral DDTM34-2026-06-17135 (11/06/2026) ; géométrie IRIS [IGN](https://geoservices.ign.fr/) |
-| **Total** | | **406** | **15 600** | |
+| **Est Ensemble** (93 : Montreuil, Bagnolet, Bondy, Bobigny, Pantin, Noisy-le-Sec, Romainville, Les Lilas, Le Pré-Saint-Gervais) | 2026 | 10 | 320 | [DRIHL Île-de-France](http://www.referenceloyer.drihl.ile-de-france.developpement-durable.gouv.fr/) (période 01/06/2026→31/05/2027) |
+| **Total** | | **416** | **15 920** | |
 
 D'autres villes (Lille, Bordeaux, EPT du 93, Pays Basque…) sont concernées
 par le dispositif ; elles seront ajoutées au fur et à mesure que des sources fiables et à
@@ -61,7 +62,7 @@ jour sont disponibles (certaines ne publient qu'un PDF d'arrêté, à intégrer 
 Les données proviennent de sources publiques diffusées sous **Licence Ouverte / Open
 Licence 2.0 (Etalab)** ; les arrêtés préfectoraux sont des actes publics librement
 reproductibles. Cette compilation est redistribuée sous la même **[Licence Ouverte 2.0](https://www.etalab.gouv.fr/licence-ouverte-open-licence/)**.
-Attribution demandée : *Ville de Paris*, *Métropole de Lyon*, *Préfecture de l'Hérault (DDTM34)*, *IGN*, et ce dépôt.
+Attribution demandée : *Ville de Paris*, *Métropole de Lyon*, *Préfecture de l'Hérault (DDTM34)*, *DRIHL Île-de-France*, *IGN*, et ce dépôt.
 
 ## Provenance & mises à jour
 
