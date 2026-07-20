@@ -27,7 +27,8 @@ publient ces données en open data.
 | **Métropole de Lyon** (Lyon + Villeurbanne) | 2025-2026 | 233 | 9 320 | [data.grandlyon.com](https://data.grandlyon.com/portail/fr/jeux-de-donnees/encadrement-des-loyers-de-la-metropole-de-lyon-2025-2026/info) |
 | **Montpellier** | 2026 | 93 | 3 720 | Arrêté préfectoral DDTM34-2026-06-17135 (11/06/2026) ; géométrie IRIS [IGN](https://geoservices.ign.fr/) |
 | **Est Ensemble** (93 : Montreuil, Bagnolet, Bondy, Bobigny, Pantin, Noisy-le-Sec, Romainville, Les Lilas, Le Pré-Saint-Gervais) | 2026 | 10 | 320 | [DRIHL Île-de-France](http://www.referenceloyer.drihl.ile-de-france.developpement-durable.gouv.fr/) (période 01/06/2026→31/05/2027) |
-| **Total** | | **416** | **15 920** | |
+| **Plaine Commune** (93 : Saint-Denis, Aubervilliers, Épinay-sur-Seine, La Courneuve, L'Île-Saint-Denis, Pierrefitte-sur-Seine, Saint-Ouen-sur-Seine, Stains, Villetaneuse) | 2026 | 10 | 320 | [DRIHL Île-de-France](http://www.referenceloyer.drihl.ile-de-france.developpement-durable.gouv.fr/) (période 01/06/2026→31/05/2027) |
+| **Total** | | **426** | **16 240** | |
 
 D'autres villes (Lille, Bordeaux, EPT du 93, Pays Basque…) sont concernées
 par le dispositif ; elles seront ajoutées au fur et à mesure que des sources fiables et à
