@@ -28,11 +28,31 @@ publient ces données en open data.
 | **Montpellier** | 2026 | 93 | 3 720 | Arrêté préfectoral DDTM34-2026-06-17135 (11/06/2026) ; géométrie IRIS [IGN](https://geoservices.ign.fr/) |
 | **Est Ensemble** (93 : Montreuil, Bagnolet, Bondy, Bobigny, Pantin, Noisy-le-Sec, Romainville, Les Lilas, Le Pré-Saint-Gervais) | 2026 | 10 | 640 | [DRIHL Île-de-France](http://www.referenceloyer.drihl.ile-de-france.developpement-durable.gouv.fr/) (période 01/06/2026→31/05/2027) |
 | **Plaine Commune** (93 : Saint-Denis, Aubervilliers, Épinay-sur-Seine, La Courneuve, L'Île-Saint-Denis, Pierrefitte-sur-Seine, Saint-Ouen-sur-Seine, Stains, Villetaneuse) | 2026 | 10 | 640 | [DRIHL Île-de-France](http://www.referenceloyer.drihl.ile-de-france.developpement-durable.gouv.fr/) (période 01/06/2026→31/05/2027) |
-| **Total** | | **426** | **16 880** | |
+| **Lille** (+ Hellemmes, Lomme) | 2026 | 110 | 3 520 | Arrêté préfectoral, via l'application cartographique du [simulateur public](https://encadrement-loyers.lille.fr/) ⚠️ |
+| **Bordeaux** | 2026 | 4 | 256 | Arrêté préfectoral, via l'application du [simulateur public](https://simulateur-loyer.bordeaux-metropole.fr/) ⚠️ |
+| **Pays Basque** (24 communes : Bayonne, Biarritz, Anglet, Saint-Jean-de-Luz, Hendaye…) | 2026 | 79 | 5 056 | Arrêté préfectoral, via l'application du [simulateur public](https://geobasque.communaute-paysbasque.fr/) ⚠️ |
+| **Grenoble-Alpes Métropole** — *13 communes sur 21* | 2026 | 13 | 416 | Arrêté préfectoral du 06/01/2026 ; contours communaux [IGN](https://geo.api.gouv.fr/) |
+| **Total** | | **632** | **26 128** | |
 
-D'autres villes (Lille, Bordeaux, EPT du 93, Pays Basque…) sont concernées
-par le dispositif ; elles seront ajoutées au fur et à mesure que des sources fiables et à
-jour sont disponibles (certaines ne publient qu'un PDF d'arrêté, à intégrer manuellement).
+⚠️ **Les lignes marquées d'un ⚠️ ne proviennent PAS d'un jeu de données publié.** Ces
+agglomérations n'ouvrent plus (ou n'ont jamais ouvert) leur barème en open data : les
+valeurs ont été relevées sur l'API applicative de leur simulateur public, sans
+authentification. La donnée est réglementaire et l'accès est public, mais **il n'y a ni
+licence, ni contrat, ni garantie de stabilité**. Nous documentons une absence, nous ne la
+remplaçons pas — une republication officielle par ces collectivités reste souhaitable, et
+nous l'avons demandée.
+
+⚠️ **Grenoble est volontairement partielle.** L'arrêté couvre 21 communes : 13 en totalité
+et 8 partiellement (dont Grenoble même, découpée en deux zones). Seules les 13 premières
+figurent ici, car pour elles la commune entière est encadrée et son contour administratif
+suffit. Le découpage infra-communal des 8 autres n'existe publiquement que sous forme
+d'atlas raster non géoréférencé : le reconstituer produirait une limite approximative,
+donc un plafond légal inventé. Nous préférons ne rien dire.
+
+⚠️ **L'expérimentation nationale (loi ELAN, art. 140) expire le 25 novembre 2026.** Sans
+prolongation votée, ces barèmes cesseront d'être opposables à cette date — sur l'ensemble
+des territoires, Paris compris. Vérifiez l'état du droit avant de vous appuyer sur ces
+données pour une décision.
 
 ## Fichiers
 
@@ -64,7 +84,7 @@ jour sont disponibles (certaines ne publient qu'un PDF d'arrêté, à intégrer 
 Les données proviennent de sources publiques diffusées sous **Licence Ouverte / Open
 Licence 2.0 (Etalab)** ; les arrêtés préfectoraux sont des actes publics librement
 reproductibles. Cette compilation est redistribuée sous la même **[Licence Ouverte 2.0](https://www.etalab.gouv.fr/licence-ouverte-open-licence/)**.
-Attribution demandée : *Ville de Paris*, *Métropole de Lyon*, *Préfecture de l'Hérault (DDTM34)*, *DRIHL Île-de-France*, *IGN*, et ce dépôt.
+Attribution demandée : *Ville de Paris*, *Métropole de Lyon*, *Préfecture de l'Hérault (DDTM34)*, *DRIHL Île-de-France*, *Ville de Lille / ADIL du Nord*, *Bordeaux Métropole / Préfecture de la Gironde*, *Communauté d'agglomération Pays Basque*, *Préfecture de l'Isère / Grenoble-Alpes Métropole*, *IGN*, et ce dépôt.
 
 ## Provenance & mises à jour
 
