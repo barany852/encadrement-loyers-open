@@ -73,6 +73,8 @@ données pour une décision.
 | `epoch` | Époque de construction : `<1946`, `1946-1970`, `1971-1990`, `>1990`, `1991-2005`, `>2005` (selon la ville) |
 | `furnished` | Meublé (`true`) ou nu (`false`) |
 | `dwelling_type` | Type de bien : `appartement`, `maison`, ou vide (grille unique valant pour les deux, ex. Paris/Lyon/Montpellier) |
+| `source` | Provenance des VALEURS du barème (arrêté, portail open data, API applicative…) |
+| `zonage_source` | Provenance de la GÉOMÉTRIE, distincte de la précédente. ⚠️ Contient `ZONAGE INFÉRÉ` pour les 54 IRIS des communes partiellement encadrées de Grenoble : leur zone n'est publiée nulle part et a été établie en croisant deux sources indépendantes (le simulateur officiel de la Métropole et la carte géoréférencée de l'arrêté), en ne retenant que les IRIS où elles concordent. Ne pas la confondre avec une couche officielle |
 | `ref_minore` | Loyer de référence minoré (€/m²/mois, hors charges) |
 | `ref_median` | Loyer de référence (médian) |
 | `ref_majore` | **Loyer de référence majoré = le plafond légal** (€/m²/mois, hors charges) |
