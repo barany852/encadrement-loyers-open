@@ -31,8 +31,8 @@ publient ces données en open data.
 | **Lille** (+ Hellemmes, Lomme) | 2026 | 110 | 3 520 | Arrêté préfectoral, via l'application cartographique du [simulateur public](https://encadrement-loyers.lille.fr/) ⚠️ |
 | **Bordeaux** | 2026 | 4 | 256 | Arrêté préfectoral, via l'application du [simulateur public](https://simulateur-loyer.bordeaux-metropole.fr/) ⚠️ |
 | **Pays Basque** (24 communes : Bayonne, Biarritz, Anglet, Saint-Jean-de-Luz, Hendaye…) | 2026 | 79 | 5 056 | Arrêté préfectoral, via l'application du [simulateur public](https://geobasque.communaute-paysbasque.fr/) ⚠️ |
-| **Grenoble-Alpes Métropole** — *13 communes sur 21* | 2026 | 13 | 416 | Arrêté préfectoral du 06/01/2026 ; contours communaux [IGN](https://geo.api.gouv.fr/) |
-| **Total** | | **632** | **26 128** | |
+| **Grenoble-Alpes Métropole** — *20 communes sur 21* | 2026 | 55 | 2 144 | Arrêté préfectoral du 06/01/2026 ; contours communaux et IRIS [IGN](https://geo.api.gouv.fr/) ⚠️ zonage inféré pour 7 communes |
+| **Total** | | **665** | **27 856** | |
 
 ⚠️ **Les lignes marquées d'un ⚠️ ne proviennent PAS d'un jeu de données publié.** Ces
 agglomérations n'ouvrent plus (ou n'ont jamais ouvert) leur barème en open data : les
@@ -42,17 +42,34 @@ licence, ni contrat, ni garantie de stabilité**. Nous documentons une absence, 
 remplaçons pas — une republication officielle par ces collectivités reste souhaitable, et
 nous l'avons demandée.
 
-⚠️ **Grenoble est volontairement partielle.** L'arrêté couvre 21 communes : 13 en totalité
-et 8 partiellement (dont Grenoble même, découpée en deux zones). Seules les 13 premières
-figurent ici, car pour elles la commune entière est encadrée et son contour administratif
-suffit. Le découpage infra-communal des 8 autres n'existe publiquement que sous forme
-d'atlas raster non géoréférencé : le reconstituer produirait une limite approximative,
-donc un plafond légal inventé. Nous préférons ne rien dire.
+⚠️ **Grenoble : 13 communes exactes, 7 inférées, 1 absente.** L'arrêté couvre 21
+communes : 13 en totalité et 8 partiellement (dont Grenoble même, découpée en deux zones).
+Pour les 13 premières, la commune entière est encadrée et son contour administratif
+suffit. Pour les partielles, le découpage n'est publié que sous forme d'atlas raster : leur
+zone a été établie **par IRIS**, en croisant deux sources indépendantes (le simulateur
+officiel de la Métropole et la carte géoréférencée de l'arrêté), et seuls les IRIS où elles
+concordent sont retenus — colonne `zonage_source` = `ZONAGE INFÉRÉ`. Les IRIS où elles
+divergent sont exclus, et **Fontaine** n'a aucun IRIS retenu : mieux vaut ne rien dire
+qu'inventer un plafond légal.
 
-⚠️ **L'expérimentation nationale (loi ELAN, art. 140) expire le 25 novembre 2026.** Sans
-prolongation votée, ces barèmes cesseront d'être opposables à cette date — sur l'ensemble
-des territoires, Paris compris. Vérifiez l'état du droit avant de vous appuyer sur ces
+⚠️ **Durée du dispositif.** L'expérimentation nationale (loi ELAN, art. 140) devait
+s'éteindre en novembre 2026. Le Parlement a définitivement adopté le **19 novembre 2026**
+sa prolongation de deux ans, **jusqu'en novembre 2028**, pour les communes déjà encadrées
+et sans extension à de nouveaux territoires. Au 20 novembre 2026, le texte restait à
+promulguer : vérifiez sa publication au *Journal officiel* avant de vous appuyer sur ces
 données pour une décision.
+
+## Interroger une adresse (API)
+
+Pour ne pas manipuler les fichiers, la même donnée est servie par une API ouverte, sans
+clé ni inscription, sous la même licence :
+
+```bash
+curl "https://logio.immo/api/public/encadrement?lat=48.8462&lon=2.3372"
+```
+
+Elle rend le secteur de l'adresse et son barème complet (`regulated: false` hors zone
+encadrée). Limite de débit par IP ; pour un usage soutenu, écrivez à `contact@logio.immo`.
 
 ## Fichiers
 
