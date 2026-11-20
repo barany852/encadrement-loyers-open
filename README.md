@@ -23,16 +23,16 @@ publient ces données en open data.
 
 | Agglomération | Millésime | Secteurs/zones | Barèmes | Source |
 |---|---|---|---|---|
-| **Paris** | 2025 | 80 | 2 560 | [opendata.paris.fr](https://opendata.paris.fr/explore/dataset/logement-encadrement-des-loyers/) |
-| **Métropole de Lyon** (Lyon + Villeurbanne) | 2025-2026 | 233 | 9 320 | [data.grandlyon.com](https://data.grandlyon.com/portail/fr/jeux-de-donnees/encadrement-des-loyers-de-la-metropole-de-lyon-2025-2026/info) |
+| **Paris** | 2025, **2026** | 80 | 2 560 par millésime | 2025 : [opendata.paris.fr](https://opendata.paris.fr/explore/dataset/logement-encadrement-des-loyers/) ; 2026 : arrêté préfectoral IDF-2026-06-12-00003 du 12/06/2026 (effet 01/07/2026), relu dans le PDF, le portail n'ayant pas encore publié |
+| **Métropole de Lyon** (Lyon + Villeurbanne) | 2025-2026, **2026-2027** | 233 | 9 320 par millésime | [data.grandlyon.com](https://data.grandlyon.com/portail/fr/recherche?q=encadrement%20des%20loyers) (2026-2027 : effet 01/11/2026) |
 | **Montpellier** | 2026 | 93 | 3 720 | Arrêté préfectoral DDTM34-2026-06-17135 (11/06/2026) ; géométrie IRIS [IGN](https://geoservices.ign.fr/) |
-| **Est Ensemble** (93 : Montreuil, Bagnolet, Bondy, Bobigny, Pantin, Noisy-le-Sec, Romainville, Les Lilas, Le Pré-Saint-Gervais) | 2026 | 10 | 640 | [DRIHL Île-de-France](http://www.referenceloyer.drihl.ile-de-france.developpement-durable.gouv.fr/) (période 01/06/2026→31/05/2027) |
-| **Plaine Commune** (93 : Saint-Denis, Aubervilliers, Épinay-sur-Seine, La Courneuve, L'Île-Saint-Denis, Pierrefitte-sur-Seine, Saint-Ouen-sur-Seine, Stains, Villetaneuse) | 2026 | 10 | 640 | [DRIHL Île-de-France](http://www.referenceloyer.drihl.ile-de-france.developpement-durable.gouv.fr/) (période 01/06/2026→31/05/2027) |
+| **Est Ensemble** (93 : Montreuil, Bagnolet, Bondy, Bobigny, Pantin, Noisy-le-Sec, Romainville, Les Lilas, Le Pré-Saint-Gervais) | 2026 | 10 | 640 | [DRIHL Île-de-France](http://www.referenceloyer.drihl.ile-de-france.developpement-durable.gouv.fr/) (arrêté du 28/04/2026, période 01/06/2026→24/11/2026) |
+| **Plaine Commune** (93 : Saint-Denis, Aubervilliers, Épinay-sur-Seine, La Courneuve, L'Île-Saint-Denis, Pierrefitte-sur-Seine, Saint-Ouen-sur-Seine, Stains, Villetaneuse) | 2026 | 10 | 640 | [DRIHL Île-de-France](http://www.referenceloyer.drihl.ile-de-france.developpement-durable.gouv.fr/) (arrêté du 28/04/2026, période 01/06/2026→24/11/2026) |
 | **Lille** (+ Hellemmes, Lomme) | 2026 | 110 | 3 520 | Arrêté préfectoral, via l'application cartographique du [simulateur public](https://encadrement-loyers.lille.fr/) ⚠️ |
 | **Bordeaux** | 2026 | 4 | 256 | Arrêté préfectoral, via l'application du [simulateur public](https://simulateur-loyer.bordeaux-metropole.fr/) ⚠️ |
 | **Pays Basque** (24 communes : Bayonne, Biarritz, Anglet, Saint-Jean-de-Luz, Hendaye…) | 2026 | 79 | 5 056 | Arrêté préfectoral, via l'application du [simulateur public](https://geobasque.communaute-paysbasque.fr/) ⚠️ |
 | **Grenoble-Alpes Métropole** — *20 communes sur 21* | 2026 | 55 | 2 144 | Arrêté préfectoral du 06/01/2026 ; contours communaux et IRIS [IGN](https://geo.api.gouv.fr/) ⚠️ zonage inféré pour 7 communes |
-| **Total** | | **665** | **27 856** | |
+| **Total** (tous millésimes) | | **686** | **39 736** | |
 
 ⚠️ **Les lignes marquées d'un ⚠️ ne proviennent PAS d'un jeu de données publié.** Ces
 agglomérations n'ouvrent plus (ou n'ont jamais ouvert) leur barème en open data : les
@@ -108,10 +108,14 @@ Attribution demandée : *Ville de Paris*, *Métropole de Lyon*, *Préfecture de 
 ## Provenance & mises à jour
 
 Compilé à partir des sources officielles listées ci-dessus, normalisé dans un schéma
-commun. Chaque ligne porte sa `source` et son `year`. Les villes à source open data
-« vive » (Paris, Lyon) sont rafraîchies automatiquement à chaque nouvel arrêté ; les
-villes à source PDF nécessitent une reprise manuelle (le millésime `year` indique la
-fraîcheur).
+commun. Chaque ligne porte sa `source` et son `year`. Chaque nouvel arrêté est
+repris à la main, y compris pour Paris et Lyon : le 2026-11-20, le portail de Paris
+avait cinq mois de retard sur l'arrêté. Le millésime `year` indique la fraîcheur, et
+les anciens millésimes restent dans le fichier.
+
+⚠️ La plupart des arrêtés en vigueur finissent le 23 ou le 24/11/2026, avec
+l'expérimentation. La loi qui prolonge le dispositif jusqu'en novembre 2028 (adoptée
+le 19/11/2026) appelle de nouveaux arrêtés, que nous reprendrons à leur parution.
 
 Maintenu par [Logio](https://logio.immo) — intelligence immobilière. Signalements et
 contributions bienvenus via les *issues*.
