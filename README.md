@@ -69,7 +69,11 @@ curl "https://logio.immo/api/public/encadrement?lat=48.8462&lon=2.3372"
 ```
 
 Elle rend le secteur de l'adresse et son barème complet (`regulated: false` hors zone
-encadrée). Limite de débit par IP ; pour un usage soutenu, écrivez à `contact@logio.immo`.
+encadrée). Limite : 60 requêtes par heure et par IP, annoncée dans les en-têtes
+`X-RateLimit-*` de chaque réponse. Pour un usage soutenu, écrivez à `contact@logio.immo`.
+
+Présentation, démo sur une adresse, couverture et fraîcheur des barèmes :
+**https://logio.immo/encadrement-des-loyers/api**
 
 ## Fichiers
 
